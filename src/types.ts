@@ -34,7 +34,12 @@ export type Plan = {
   tables: Table[];
   guests: Guest[];
   rules: Rule[];
+  createdAt: number;
   updatedAt: number;
+};
+
+export type TrashedPlan = Plan & {
+  deletedAt: number;
 };
 
 export type Command =

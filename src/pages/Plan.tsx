@@ -24,7 +24,8 @@ export default function PlanPage() {
     if (!id) return;
     getPlan(id).then((p) => {
       if (!p) {
-        const fallback = { id, name: '未命名方案', tables: [], guests: [], rules: [], updatedAt: Date.now() };
+        const now = Date.now();
+        const fallback = { id, name: '未命名方案', tables: [], guests: [], rules: [], createdAt: now, updatedAt: now };
         historyRef.current = createHistoryManager(fallback);
         setPlan(fallback);
       } else {

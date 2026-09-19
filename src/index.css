@@ -104,6 +104,285 @@ html, body, #root {
   color: #999;
 }
 
+.empty-state p {
+  margin: 0 0 8px;
+}
+
+.empty-state-sub {
+  font-size: 13px;
+  color: #b0a89e;
+}
+
+.clear-search-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #b8860b;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.clear-search-btn:hover {
+  background: #fff8e1;
+}
+
+/* Home toolbar: search + sort */
+.home-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 9px 14px;
+  border: 1px solid #e0d8ce;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
+}
+
+.sort-select,
+.sort-dir-btn {
+  padding: 8px 12px;
+  border: 1px solid #e0d8ce;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+  cursor: pointer;
+  color: #555;
+  white-space: nowrap;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.sort-dir-btn:hover {
+  background: #fff8e1;
+  border-color: #d4af37;
+}
+
+.list-hint {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #999;
+}
+
+.match-guests {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #b8860b;
+  background: #fff8e1;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.plan-time {
+  margin: 4px 0 0;
+  color: #b0a89e;
+  font-size: 12px;
+}
+
+.plan-actions .delete-btn {
+  color: #c0392b;
+  border-color: #e8c4bf;
+}
+
+.plan-actions .delete-btn:hover {
+  background: #fdf0ef;
+}
+
+/* Trash (recycle bin) */
+.trash-section {
+  margin-top: 36px;
+  border-top: 1px dashed #e0d8ce;
+  padding-top: 16px;
+}
+
+.trash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.trash-header h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #888;
+}
+
+.trash-toggle {
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-trash-btn {
+  background: transparent;
+  border: 1px solid #e8c4bf;
+  color: #c0392b;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.empty-trash-btn:hover {
+  background: #fdf0ef;
+}
+
+.trash-tip {
+  font-size: 12px;
+  color: #b0a89e;
+  margin: 10px 0;
+}
+
+.trash-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.trash-item {
+  background: #faf7f3;
+  border: 1px solid #ece4da;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trash-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trash-name {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.trash-meta {
+  font-size: 12px;
+  color: #a89e92;
+}
+
+.trash-actions button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 12px;
+  margin-left: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.trash-actions .delete-btn {
+  color: #c0392b;
+  border-color: #e8c4bf;
+}
+
+.trash-actions button:hover {
+  background: #f5f5f5;
+}
+
+/* Delete confirmation modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.delete-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  width: 440px;
+  max-width: calc(100vw - 40px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.delete-modal h3 {
+  margin: 0 0 14px;
+  font-size: 17px;
+  color: #c0392b;
+}
+
+.delete-summary p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.delete-summary ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #666;
+  line-height: 2;
+}
+
+.delete-summary b {
+  color: #c0392b;
+}
+
+.delete-note {
+  font-size: 12px;
+  color: #999;
+  background: #faf7f3;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.modal-actions button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-actions .btn-danger {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+.modal-actions .btn-danger:hover {
+  background: #a93226;
+}
+
 /* Plan Page */
 .plan-page {
   display: flex;
