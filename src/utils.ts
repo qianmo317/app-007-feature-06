@@ -6,13 +6,15 @@ export function generateId(): string {
 }
 
 export function createEmptyPlan(name = '未命名方案'): Plan {
+  const now = Date.now();
   return {
     id: generateId(),
     name,
     tables: [],
     guests: [],
     rules: [],
-    updatedAt: Date.now(),
+    createdAt: now,
+    updatedAt: now,
   };
 }
 

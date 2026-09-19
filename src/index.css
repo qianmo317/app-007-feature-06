@@ -104,6 +104,107 @@ html, body, #root {
   color: #999;
 }
 
+.empty-hint {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* Home toolbar: search + sort */
+.home-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.sort-select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.sort-dir-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sort-dir-btn:hover {
+  background: #f5f5f5;
+}
+
+.plan-dates {
+  margin-top: 2px;
+}
+
+.matched-guests {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #c0392b;
+}
+
+/* Trash */
+.trash-section {
+  margin-top: 32px;
+}
+
+.trash-toggle {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+.trash-toggle:hover {
+  color: #c0392b;
+}
+
+.trash-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.trash-item {
+  background: #f5f2ee;
+  border: 1px dashed #d8cfc4;
+  border-radius: 10px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trash-item h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #666;
+}
+
 /* Plan Page */
 .plan-page {
   display: flex;

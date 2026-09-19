@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getPlan, savePlan, setRecentPlanId } from '../db';
 import { createHistoryManager } from '../history';
-import { getConflictMap, getTableStats } from '../utils';
+import { getConflictMap, getTableStats, createEmptyPlan } from '../utils';
 import type { Plan as PlanType, Command } from '../types';
 import GuestPool from '../components/GuestPool';
 import Canvas from '../components/Canvas';
@@ -24,7 +24,7 @@ export default function PlanPage() {
     if (!id) return;
     getPlan(id).then((p) => {
       if (!p) {
-        const fallback = { id, name: '未命名方案', tables: [], guests: [], rules: [], updatedAt: Date.now() };
+        const fallback = { ...createEmptyPlan(), id };
         historyRef.current = createHistoryManager(fallback);
         setPlan(fallback);
       } else {

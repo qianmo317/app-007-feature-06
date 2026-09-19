@@ -34,6 +34,7 @@ export type Plan = {
   tables: Table[];
   guests: Guest[];
   rules: Rule[];
+  createdAt: number;
   updatedAt: number;
 };
 
